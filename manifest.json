@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "GPT Buddy",
+  "description": "Summarize any webpage!",
+  "version": "1.0",
+  "action": {
+    "default_popup": "src/popup.html",
+    "default_icon": "icons/extension_image.png"
+  }
+}
