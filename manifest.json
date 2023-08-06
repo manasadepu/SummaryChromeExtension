@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "GPT Buddy",
+  "name": "Summarize Buddy",
   "description": "Summarize any webpage!",
   "version": "0.5",
   "action": {
