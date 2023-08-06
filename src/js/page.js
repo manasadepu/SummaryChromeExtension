@@ -22,3 +22,12 @@ chrome.runtime.onMessage.addListener(function (request, sender, callback){
     return true;
    
 });
+
+
+chrome.runtime.onInstalled.addListener(function(details) {
+    if (details.reason === 'install') {
+      // Redirect the user to your landing page
+      chrome.tabs.create({ url: 'https://summarize-extension-80316dc1c6da.herokuapp.com/welcome' });
+    }
+  });
+  
