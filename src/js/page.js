@@ -4,13 +4,19 @@ chrome.runtime.onMessage.addListener(function (request, sender, callback){
         var h1Text = $('h1').first().text();
 
         var paragraphText = $('p');
-        var filteredtext;
+        var filteredtext = "";
         for (let p of paragraphText){
             const p_text = $(p).text();
-            if (p_text.includes(".") && !p_text.includes("\n")){
-                filteredtext += ' ' + p_text;
+            console.log("paragraph text", p_text)
+            if (p_text.includes(".")){
+                filteredtext += p_text;
+                filteredtext += "\n";
             }
         }
+
+        console.log(filteredtext)
+
+
         callback({success:true, header: h1Text, article: filteredtext});
     }
     return true;
